@@ -1,0 +1,48 @@
+@model Hung.Models.StudentResultViewModel
+
+@{
+    ViewData["Title"] = "Kết quả đăng ký";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6 animate-fade-in">
+        <div class="glass-card text-center">
+            @if (Model?.Student is not null)
+            {
+                <div class="mb-4">
+                    <i class="fas fa-check-circle text-success" style="font-size: 5rem;"></i>
+                </div>
+                <h2 class="fw-bold mb-3">@ViewData["Title"] Thành Công!</h2>
+                <div class="text-start bg-white p-4 rounded-4 mb-4 border border-light">
+                    <p class="mb-2"><strong><i class="fas fa-id-card me-2"></i>MSSV:</strong> @Model.Student.MSSV</p>
+                    <p class="mb-2"><strong><i class="fas fa-user me-2"></i>Họ tên:</strong> @Model.Student.HoTen</p>
+                    <p class="mb-2"><strong><i class="fas fa-microchip me-2"></i>Chuyên ngành:</strong> @Model.Student.ChuyenNganh</p>
+                    <hr>
+                    <p class="mb-0 text-muted">
+                        <i class="fas fa-users me-2"></i>Số lượng sinh viên đã đăng ký ngành này: 
+                        <span class="badge bg-primary-gradient rounded-pill px-3">@Model.SoLuongCungNganh</span>
+                    </p>
+                </div>
+                <p class="text-muted mb-4">Thông tin của bạn đã được ghi nhận vào hệ thống.</p>
+                <div class="d-grid">
+                    <a asp-action="Index" class="btn btn-primary-gradient">
+                        <i class="fas fa-arrow-left me-2"></i>Quay lại trang đăng ký
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div class="mb-4">
+                    <i class="fas fa-exclamation-triangle text-warning" style="font-size: 5rem;"></i>
+                </div>
+                <h2 class="fw-bold mb-3">Không có dữ liệu</h2>
+                <p class="text-muted mb-4">Vui lòng quay lại và thực hiện đăng ký thông tin.</p>
+                <div class="d-grid">
+                    <a asp-action="Index" class="btn btn-primary-gradient">
+                        <i class="fas fa-arrow-left me-2"></i>Đăng ký ngay
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+@model Hung.Models.StudentViewModel
+
+@{
+    ViewData["Title"] = "Đăng ký chuyên ngành";
+    var majors = ViewData["Majors"] as string[] ?? Array.Empty<string>();
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6 animate-fade-in">
+        <div class="glass-card">
+            <div class="text-center mb-5">
+                <h2 class="fw-bold">@ViewData["Title"]</h2>
+                <p class="text-muted">Vui lòng điền đầy đủ thông tin bên dưới để hoàn tất đăng ký.</p>
+            </div>
+
+            <form asp-action="ShowKQ" method="post">
+                <div class="mb-4">
+                    <label asp-for="MSSV" class="form-label">
+                        <i class="fas fa-id-card me-2"></i>Mã số sinh viên
+                    </label>
+                    <input asp-for="MSSV" class="form-control" placeholder="Nhập MSSV..." />
+                    <span asp-validation-for="MSSV" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="HoTen" class="form-label">
+                        <i class="fas fa-user me-2"></i>Họ và tên
+                    </label>
+                    <input asp-for="HoTen" class="form-control" placeholder="Nhập đầy đủ họ tên..." />
+                    <span asp-validation-for="HoTen" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-4">
+                    <label asp-for="DiemTB" class="form-label">
+                        <i class="fas fa-chart-line me-2"></i>Điểm trung bình
+                    </label>
+                    <input asp-for="DiemTB" class="form-control" placeholder="Ví dụ: 8.5" />
+                    <span asp-validation-for="DiemTB" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-5">
+                    <label asp-for="ChuyenNganh" class="form-label">
+                        <i class="fas fa-microchip me-2"></i>Chuyên ngành
+                    </label>
+                    <select asp-for="ChuyenNganh" class="form-select">
+                        <option value="">-- Chọn chuyên ngành --</option>
+                        @foreach (var major in majors)
+                        {
+                            <option value="@major">@major</option>
+                        }
+                    </select>
+                    <span asp-validation-for="ChuyenNganh" class="text-danger small"></span>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary-gradient btn-lg">
+                        <i class="fas fa-paper-plane me-2"></i>Đăng ký ngay
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,47 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="row justify-content-center align-items-center" style="min-height: 60vh;">
+    <div class="col-md-10 text-center animate-fade-in">
+        <h1 class="display-2 fw-bold mb-4" style="background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+            STUDENT PORTAL
+        </h1>
+        <p class="lead mb-5 text-muted">Hệ thống quản lý và đăng ký chuyên ngành dành cho sinh viên. Hiện đại, nhanh chóng và chính xác.</p>
+        
+        <div class="d-flex justify-content-center gap-3">
+            <a asp-controller="Student" asp-action="Index" class="btn btn-primary-gradient btn-lg px-5">
+                <i class="fas fa-edit me-2"></i>Bắt đầu Đăng ký
+            </a>
+            <a href="#" class="btn btn-outline-secondary btn-lg px-5 rounded-4">
+                <i class="fas fa-info-circle me-2"></i>Tìm hiểu thêm
+            </a>
+        </div>
+
+        <div class="mt-5 pt-5">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="glass-card p-4">
+                        <i class="fas fa-bolt text-warning mb-3" style="font-size: 2rem;"></i>
+                        <h4 class="fw-bold">Nhanh chóng</h4>
+                        <p class="small text-muted mb-0">Xử lý đăng ký tức thì với độ trễ tối thiểu.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card p-4">
+                        <i class="fas fa-shield-alt text-primary mb-3" style="font-size: 2rem;"></i>
+                        <h4 class="fw-bold">Bảo mật</h4>
+                        <p class="small text-muted mb-0">Dữ liệu được mã hóa và bảo vệ an toàn.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="glass-card p-4">
+                        <i class="fas fa-mobile-alt text-success mb-3" style="font-size: 2rem;"></i>
+                        <h4 class="fw-bold">Tiện lợi</h4>
+                        <p class="small text-muted mb-0">Giao diện thân thiện, tương thích mọi thiết bị.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
