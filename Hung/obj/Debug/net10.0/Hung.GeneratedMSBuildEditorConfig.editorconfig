@@ -22,16 +22,28 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/admin1/Downloads/.net/Hung/Views/Home/BaiTap2.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxCYWlUYXAyLmNzaHRtbA==
+[C:/Users/admin1/Downloads/.net/Hung/Views/Home/ActorDemo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxBY3RvckRlbW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/admin1/Downloads/.net/Hung/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/admin1/Downloads/.net/Hung/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/admin1/Downloads/.net/Hung/Views/Home/TodoCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUb2RvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin1/Downloads/.net/Hung/Views/Home/TodoDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUb2RvRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin1/Downloads/.net/Hung/Views/Home/TodoEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUb2RvRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/admin1/Downloads/.net/Hung/Views/Home/TodoList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUb2RvTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/admin1/Downloads/.net/Hung/Views/Shared/Error.cshtml]
@@ -40,14 +52,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/admin1/Downloads/.net/Hung/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/admin1/Downloads/.net/Hung/Views/Student/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/admin1/Downloads/.net/Hung/Views/Student/ShowKQ.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTaG93S1EuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/admin1/Downloads/.net/Hung/Views/_ViewImports.cshtml]

@@ -1,0 +1,73 @@
+@model IEnumerable<Hung.Models.TodoItem>
+
+@{
+    ViewData["Title"] = "Bài tập vận dụng 2 - TodoList";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-11 animate-fade-in">
+        <div class="glass-card">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="mb-1 fw-bold" style="background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                        BÀI TẬP VẬN DỤNG 2
+                    </h2>
+                    <p class="text-muted small mb-0">Xây dựng ứng dụng TodoList với các chức năng: Xem danh sách, chi tiết, thêm, sửa, xoá</p>
+                </div>
+                <a asp-action="TodoCreate" class="btn btn-primary-gradient">
+                    <i class="fas fa-plus me-2"></i>Thêm mới công việc
+                </a>
+            </div>
+
+            <div class="table-responsive">
+                <table class="table table-hover align-middle">
+                    <thead class="table-light border-0">
+                        <tr>
+                            <th class="ps-4">Mã công việc</th>
+                            <th>Tên công việc</th>
+                            <th class="text-center">Trạng thái</th>
+                            <th class="text-end pe-4">Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="ps-4"><span class="badge bg-light text-dark border">#@item.MaCongViec</span></td>
+                                <td class="fw-medium">@item.TenCongViec</td>
+                                <td class="text-center">
+                                    @if (item.TrangThaiHoanThanh)
+                                    {
+                                        <span class="badge bg-success-subtle text-success px-3 py-2 rounded-pill">
+                                            <i class="fas fa-check-circle me-1"></i>Hoàn thành
+                                        </span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-warning-subtle text-warning px-3 py-2 rounded-pill">
+                                            <i class="fas fa-clock me-1"></i>Chưa hoàn thành
+                                        </span>
+                                    }
+                                </td>
+                                <td class="text-end pe-4">
+                                    <div class="btn-group">
+                                        <a asp-action="TodoDetails" asp-route-id="@item.Id" class="btn btn-sm btn-outline-info border-0" title="Chi tiết">
+                                            <i class="fas fa-eye"></i>
+                                        </a>
+                                        <a asp-action="TodoEdit" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary border-0" title="Sửa">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a asp-action="TodoDelete" asp-route-id="@item.Id" class="btn btn-sm btn-outline-danger border-0" 
+                                           onclick="return confirm('Bạn có chắc muốn xoá công việc này?');" title="Xoá">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

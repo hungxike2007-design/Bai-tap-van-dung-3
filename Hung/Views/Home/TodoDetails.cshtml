@@ -1,0 +1,49 @@
+@model Hung.Models.TodoItem
+
+@{
+    ViewData["Title"] = "Chi tiết công việc";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-6 animate-fade-in">
+        <div class="glass-card">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="mb-0 fw-bold" style="background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                    Chi tiết công việc
+                </h2>
+                <span class="badge @(Model.TrangThaiHoanThanh ? "bg-success" : "bg-warning") rounded-pill px-3">
+                    @(Model.TrangThaiHoanThanh ? "Hoàn thành" : "Đang thực hiện")
+                </span>
+            </div>
+
+            <div class="mb-4">
+                <div class="p-3 bg-light rounded-4 mb-3">
+                    <label class="form-label text-muted small text-uppercase mb-1">Mã công việc</label>
+                    <div class="fw-bold fs-5 text-primary">#@Model.MaCongViec</div>
+                </div>
+
+                <div class="p-3 bg-light rounded-4 mb-3">
+                    <label class="form-label text-muted small text-uppercase mb-1">Tên công việc</label>
+                    <div class="fw-bold fs-5">@Model.TenCongViec</div>
+                </div>
+
+                <div class="p-3 bg-light rounded-4">
+                    <label class="form-label text-muted small text-uppercase mb-1">Trạng thái hiện tại</label>
+                    <div class="d-flex align-items-center">
+                        <i class="fas @(Model.TrangThaiHoanThanh ? "fa-check-circle text-success" : "fa-clock text-warning") me-2 fs-5"></i>
+                        <span class="fw-medium">@(Model.TrangThaiHoanThanh ? "Đã hoàn thành tất cả các bước" : "Công việc đang trong quá trình thực hiện")</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex gap-2">
+                <a asp-action="TodoEdit" asp-route-id="@Model.Id" class="btn btn-primary-gradient flex-grow-1">
+                    <i class="fas fa-edit me-2"></i>Chỉnh sửa
+                </a>
+                <a asp-action="TodoList" class="btn btn-light rounded-pill px-4">
+                    Quay lại danh sách
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

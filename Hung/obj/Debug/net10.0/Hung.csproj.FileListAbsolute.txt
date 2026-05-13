@@ -95,3 +95,4 @@ C:\Users\admin1\Downloads\.net\Hung\obj\Debug\net10.0\Hung.pdb
 C:\Users\admin1\Downloads\.net\Hung\obj\Debug\net10.0\Hung.genruntimeconfig.cache
 C:\Users\admin1\Downloads\.net\Hung\obj\Debug\net10.0\ref\Hung.dll
 C:\Users\admin1\Downloads\.net\Hung\obj\Debug\net10.0\compressed\9hxc7f9i6w-{0}-jseavhxc52-jseavhxc52.gz
+C:\Users\admin1\Downloads\.net\Hung\obj\Debug\net10.0\Hung.sourcelink.json

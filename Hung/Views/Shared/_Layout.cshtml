@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Student Portal</title>
+    <title>@ViewData["Title"] - Danh sách</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +28,9 @@
                             <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Student" asp-action="Index">Đăng ký</a>
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="TodoList">Danh sách</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -46,7 +44,7 @@
 
     <footer class="text-muted">
         <div class="container text-center">
-            <p class="mb-0">&copy; 2026 - Student Portal - Built with <i class="fas fa-heart text-danger mx-1"></i> for Education</p>
+            <p class="mb-0">&copy; 2026 - Todo Demo - Built with <i class="fas fa-heart text-danger mx-1"></i></p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
